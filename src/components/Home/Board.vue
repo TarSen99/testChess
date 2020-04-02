@@ -7,7 +7,7 @@
     </t-row>
    
     <div class="playing-board">
-      <t-row     
+      <t-row
         v-for="i in size" 
         :key="i"
         class="cell-row"
@@ -77,13 +77,29 @@ export default {
       width: 10vw;
     }
 
-    @media screen and (min-width: $lg){
+    @media screen and (min-width: $md){
       .board {
         max-width: 480px;
       }
       .cell {
         height: 60px;
         width: 60px;
+      }
+    }
+
+    @media screen and (min-width: $lg){
+      .board {
+        max-width: 400px;
+      }
+      .cell {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    @media screen and (max-width: $lg){
+      .board {
+       padding-bottom: 100px;
       }
     }
 </style>

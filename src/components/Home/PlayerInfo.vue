@@ -20,10 +20,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+  @import '@/style/breakpoint.scss';
+
   .player-info {
     display: flex;
     align-items: center;
+    transition: all 0.2s;
   }
   
   p.player-info__name {
@@ -38,5 +41,16 @@ export default {
     border: 2px solid #d1d1d1;
     margin-right: 15px;
     background: #e1e1e1;
+  }
+
+  @media screen and (max-width: $lg){
+    p.player-info__name {
+      font-size: 1.2rem;
+    }
+
+    .player-info__img {
+      width: 30px;
+      height: 30px;
+    } 
   }
 </style>
